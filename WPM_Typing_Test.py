@@ -61,6 +61,7 @@ def wpm_test(stdscr):
         if ord(key) == 27:
             break
 
+        # backspace feature -> when we hit the backspace it remove char
         if key in ("KEY_BACKSPACE", '\b', "\x7f"):
             if len(current_text) > 0:
                 current_text.pop()
