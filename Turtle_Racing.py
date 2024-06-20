@@ -43,9 +43,9 @@ def create_turtles(colors):
         racer = turtle.Turtle()
         racer.color(color)
         racer.shape('turtle')
-        racer.left(90)
+        racer.left(90)                      # now its face towars north after turning left 90 degree
         racer.penup()
-        # turtle starting psoition
+        # turtle starting position
         racer.setpos(-WIDTH//2 + (i + 1) * spacingx, -HEIGHT//2 + 20)
         racer.pendown()
         turtles.append(racer)
