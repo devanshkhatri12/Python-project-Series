@@ -20,4 +20,8 @@ def copy_folder_to_directory(source, dest):
         print(f"folder already exists in: {dest}")
 
 
-copy_folder_to_directory(source_dir, destination_dir)
+schedule.every().day.at("18:57").do(lambda: copy_folder_to_directory)
+
+while True:
+    schedule.run_pending()
+    time.sleep(60)
